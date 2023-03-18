@@ -1,0 +1,104 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="webfonts/Montserrat-VariableFont_wght.ttf">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <title>Yummy</title>
+</head>
+<body>
+  <div class="landing justify-content-around align-items-center">
+    <span class="loader"></span>
+  </div>
+  <div id="navbar" class="vh-100 col-md-3 z-999 d-flex position-fixed justify-content-between bg-white">
+    <div class="nav_inner d-flex flex-column justify-content-between bg-black py-4 px-4">
+      <div class="text-white overflow-hidden">
+        <div id="navLinks">
+          <ul class="text-white overflow-hidden list-unstyled">
+            <li class="py-2 position-relative cursor_pointer" onclick="Search()">Search</li>
+            <li class="py-2 position-relative cursor_pointer" onclick="getcategories()">Categories</li>
+            <li class="py-2 position-relative cursor_pointer" onclick="getArea()">Area</li>
+            <li class="py-2 position-relative cursor_pointer" onclick="getIngredients()">Ingredients</li>
+            <li class="py-2 position-relative cursor_pointer" onclick="Contact()">Contact Us</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-white">
+        <a href="" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+        <a href="" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" class="text-white"><i class="fa-solid fa-globe"></i></a>
+        <p class="fs_v">Copyright Â© 2019 All RightsReserved. </br>by Mostafa Khaled</p>
+      </div>
+    </div>
+
+
+
+    <div class="nav_outer d-flex flex-column justify-content-between py-4 align-items-center">
+      <img src="img/logo.png" class="w-75" alt="">
+      <i id="navIcon" class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+      <div>
+        <i class="fa-solid fa-globe d-block mb-1"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <section id="Search" class="d-none">
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-5"><input id="Search-By-Name" onkeyup="findName()" type="text"
+            class="form-control bg-transparent text-white" placeholder="Search By Name"></div>
+        <div class="col-md-5"><input id="Search-By-First" type="text" onkeyup="findF()"
+            class="form-control bg-transparent text-white" placeholder="Search By First Letter" maxlength="1"></div>
+    </section>
+    <div class="container py-5">
+      <div class="landing1 justify-content-around align-items-center">
+        <span class="loader"></span>
+      </div>
+      <section id="foodDisplay">
+        <div id="food_card" class="row g-3">
+        </div>
+      </section>
+      <section id="foodDetails">
+      </section>
+    </div>
+  </div>
+  <section id="Contact" class="d-none">
+    <div class="container pt-5 h-50 w-75">
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-5">
+          <input onkeyup="validName() ,Submit1()" type="text" id="nameInput" placeholder="Enter Your Name" class="form-control">
+          <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid Name</div>
+        </div>
+        <div class="col-md-5">
+          <input onkeyup="validEmail() ,Submit1()" id="emailInput" type="email" placeholder="Enter Your Email" class="form-control">
+          <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</div>
+        </div>
+        <div class="col-md-5">
+          <input onkeyup="validphone() ,Submit1()" type="number" id="phoneInput" placeholder="Enter Your Phone" class="form-control">
+          <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid Phone Number</div>
+        </div>
+        <div class="col-md-5">
+          <input onkeyup="validage() ,Submit1()" type="number" id="ageInput" placeholder="Enter Your Age" class="form-control">
+          <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid age</div>
+        </div>
+        <div class="col-md-5"><input onkeyup="validpassword() ,Submit1()" type="password" id="passwordInput" placeholder="Enter Your Password" class="form-control">
+          <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+            Enter valid password *Minimum 8 characters, at least one letter and one number:*</div>
+        </div>
+        <div class="col-md-5">
+          <input onkeyup="validrepassword() ,Submit1()" type="password" id="repasswordInput" placeholder="Repassword" class="form-control">
+          <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid repassword</div>
+        </div>
+      </div>
+      <div class="w-25 m-auto text-center pt-4">
+        <div id="unSubmit" class="btn1 rounded-2 cursor-alias btn-outline-danger">Submit</div>
+        <button id="Submit" class="btn d-none btn-outline-danger">Submit</button>
+    </div>
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
